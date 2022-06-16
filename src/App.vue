@@ -2,23 +2,23 @@
   <div class="wrapper">
     <MainHeaderVue />
     <div class="wrapper-content">
-      <div class="container">
-        <p>
-          Ветклиника и ветаптека
-          «Друг рядом»
-        </p>
-      </div>
+      <MainContainer />
+      <MainFooter />
     </div>
   </div>
 </template>
 
 <script>
-import MainHeaderVue from "@/components/MainHeader.vue";
+import MainHeaderVue from "@/components/MainHeader";
+import MainContainer from "@/components/MainContainer";
+import MainFooter from "@/components/MainFooter";
 
 export default {
   name: 'App',
   components: {
     MainHeaderVue,
+    MainContainer,
+    MainFooter
   }
 }
 </script>

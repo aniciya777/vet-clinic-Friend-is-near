@@ -17,19 +17,14 @@
 
 .navbar-logo, .navbar-logo img {
   height: 45px;
-  width: 45px;
-}
-
-.navbar-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 51px;
 }
 
 .navbar-item {
   font-size: 24px;
-  margin-right: 30px;
   cursor: pointer;
+  white-space: nowrap;
+  margin-right: 10px;
   &:last-child {
     margin-right: 0;
   }
