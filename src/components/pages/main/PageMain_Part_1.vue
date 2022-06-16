@@ -68,7 +68,7 @@ export default {
       phonenumber: app.phones[0].phone_number,
       countReviews: getCountReviewsHuman() + ' отзывов',
       rating: getRating(),
-      review: getRandomReview(),
+      review: null,
     };
   },
   created() {
@@ -77,7 +77,7 @@ export default {
   },
   methods: {
     async fetchData() {
-      this.review = getRandomReview();
+      this.review = getRandomReview(this.review);
     },
     cancelAutoUpdate() {
       clearInterval(this.timer);

@@ -4,6 +4,7 @@ const defaultAvatarURL = "./static/svg/user-profile-default.svg";
 
 const reviews = [
     {
+        id: 1,
         text: "Очень конпетентные врачи и удобный магазин с доставкой до дома!",
         sname: "Фамилия1",
         name: "Имя1",
@@ -11,6 +12,7 @@ const reviews = [
         rating: 4.9,
     },
     {
+        id: 2,
         text: "Отличные врачи и приемлимые цены",
         sname: "Фамилия2",
         name: "Имя2",
@@ -18,6 +20,7 @@ const reviews = [
         rating: 5,
     },
     {
+        id: 3,
         text: "Всё супер",
         sname: "Фамилия3",
         name: "Имя3",
@@ -49,7 +52,7 @@ export function getRating() {
     return (Math.round((rating + Number.EPSILON) * 10) / 10).toFixed(1);
 }
 
-export function getRandomReview() {
+export function getRandomReview(old_review=null) {
     const n = getCountReviews();
     if (n === 0) {
         return {
@@ -60,7 +63,12 @@ export function getRandomReview() {
             rating: NaN,
         };
     }
-    const result = reviews[Math.floor(Math.random() * n)];
+    const old_id = (old_review === null) ? null : old_review.id;
+    let result;
+    // Генерация нового отзыва, чтобы он не совпадал с предыдущим
+    do {
+        result = reviews[Math.floor(Math.random() * n)];
+    } while (n > 1 && result.id === old_id);
     result.fullname = result.sname + ' ' + result.name;
     if (result.avatar === null) {
         result.avatar = defaultAvatarURL;
