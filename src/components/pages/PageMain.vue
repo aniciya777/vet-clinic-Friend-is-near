@@ -21,17 +21,17 @@
         <div class="col-8">
           <div class="review-component">
             <div class="row review-component__review-text">
-              <div class="col-10 offset-2">
+              <div class="col-lg-10 offset-lg-2 col-sm-12 offset-sm-0">
                 {{ review.text }}
               </div>
             </div>
             <div class="row align-items-center">
-              <div class="col-2">
+              <div class="col-lg-2 col-sm-3">
                 <div class="review-component__review-avatar">
                   <img :src="review.avatar" :alt="review.fullname">
                 </div>
               </div>
-              <div class="col-10">
+              <div class="col-lg-10 col-sm-9">
                 {{ review.fullname }}
               </div>
             </div>

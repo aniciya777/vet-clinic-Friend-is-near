@@ -140,5 +140,10 @@ p {
   margin-bottom: 1em;
 }
 
+.ul-list_dotted li {
+  list-style-type: disc;
+  margin-left: 1em;
+}
+
 @import './common/_common';
 @import './helpers/_helpers';
