@@ -36,7 +36,7 @@ export default {
 <style scoped lang="scss">
   .navbar-link__in-button {
     background-image: url("@/assets/svg/button_cabinet.svg");
-    background-size: contain;
+    background-size: cover;
     padding: 8px 10px;
   }
 </style>
