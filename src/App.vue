@@ -2,7 +2,9 @@
   <div class="wrapper">
     <MainHeaderVue />
     <div class="wrapper-content">
-      <MainContainer />
+      <div class="container main-container">
+        <router-view />
+      </div>
       <MainFooter />
     </div>
   </div>
@@ -10,14 +12,12 @@
 
 <script>
 import MainHeaderVue from "@/components/MainHeader";
-import MainContainer from "@/components/MainContainer";
 import MainFooter from "@/components/MainFooter";
 
 export default {
   name: 'App',
   components: {
     MainHeaderVue,
-    MainContainer,
     MainFooter
   }
 }
