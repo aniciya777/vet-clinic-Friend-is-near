@@ -130,5 +130,15 @@ section,
   padding: 54px 48px;
 }
 
+h1 {
+  font-size: 60px;
+  white-space: break-spaces;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
 @import './common/_common';
 @import './helpers/_helpers';

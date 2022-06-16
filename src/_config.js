@@ -8,6 +8,12 @@ export const site = {
 
 export const app = {
     title: "Ветклиника и ветаптека «Друг рядом»",
+    phones: [
+        {
+            name: "Основной",
+            phone_number: "+7(XXX) XXX-XX-XX",
+        }
+    ],
 };
 
 export const links = [
