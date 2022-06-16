@@ -2,9 +2,7 @@
   <div class="wrapper">
     <MainHeaderVue />
     <div class="wrapper-content">
-      <div class="container main-container">
-        <router-view />
-      </div>
+      <router-view />
       <MainFooter />
     </div>
   </div>

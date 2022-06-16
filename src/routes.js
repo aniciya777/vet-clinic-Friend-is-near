@@ -2,8 +2,8 @@ import {createRouter, createWebHashHistory} from "vue-router";
 
 const routerHistory = createWebHashHistory();
 
-import PageMain from "@/components/pages/PageMain";
-import PageDiscounts from "@/components/pages/PageDiscounts";
+import PageMain from "@/components/pages/main/PageMain";
+import PageDiscounts from "@/components/pages/discounts/PageDiscounts";
 
 const routers = createRouter({
     history: routerHistory,
