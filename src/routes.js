@@ -1,6 +1,6 @@
-import {createRouter, createWebHistory} from "vue-router";
+import {createRouter, createWebHashHistory} from "vue-router";
 
-const routerHistory = createWebHistory();
+const routerHistory = createWebHashHistory();
 
 import PageMain from "@/components/pages/PageMain";
 
