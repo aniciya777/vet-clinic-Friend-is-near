@@ -1,0 +1,161 @@
+// px to rem
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1rem;
+}
+
+.md-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.md-body > :first-child {
+  margin-top: 0 !important;
+}
+
+.md-body > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.md-body blockquote,
+.md-body details,
+.md-body dl,
+.md-body ol,
+.md-body p,
+.md-body pre,
+.md-body ul {
+  margin-top: 0;
+  margin-bottom: rem(16);
+}
+
+.md-body a {
+  position: relative;
+  background-color: transparent;
+  text-decoration: underline;
+  transition: 0.2s color;
+  user-select: none;
+  color: $primary-color;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+  a:not([href]) {
+    color: inherit;
+  }
+}
+
+.md-body h1,
+.md-body h2,
+.md-body h3,
+.md-body h4,
+.md-body h5,
+.md-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.md-body h1 {
+  font-size: 1.8em;
+  margin: 0.7em 0;
+}
+
+.md-body h2 {
+  font-size: 1.52em;
+  padding-top: 0.2em;
+  margin: 0.5em 0;
+}
+
+.md-body h3 {
+  font-size: 1.2em;
+  padding-top: 0.4em;
+  margin: 0.4em 0;
+}
+
+.md-body h4 {
+  font-size: 1em;
+  padding-top: 0.3em;
+  margin: 0.3em 0;
+}
+
+.md-body code,
+.md-body kbd,
+.md-body pre {
+  font-family: monospace, monospace;
+}
+
+.md-body ol,
+.md-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.md-body ol,
+.md-body ul {
+  padding-left: 1.4em;
+  margin-top: 1.4em;
+  margin-bottom: 2em;
+}
+
+.md-body li + li {
+  margin-top: 0.25em;
+}
+
+// Image
+.md-body img {
+  max-width: 100%;
+  border-style: none;
+  box-sizing: initial;
+  margin-bottom: 1em;
+}
+
+.md-body img[align="right"] {
+  padding-left: 20px;
+}
+
+.md-body img[align="left"] {
+  padding-right: 20px;
+}
+
+// ul list + class .ul-st
+ul > li:first-child > ul > li {
+  list-style-type: square;
+}
+
+.md-body ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: rem(40);
+  li {
+    position: relative;
+    margin-bottom: calc(1.82em / 2);
+    list-style-type: disc;
+  }
+}
+
+.md-body ol {
+  position: relative;
+  counter-reset: list;
+  list-style: none;
+  li {
+    position: relative;
+    padding-left: rem(40);
+    margin-bottom: rem(20);
+    &:before {
+      display: inline-block;
+      position: absolute;
+      left: rem(18);
+      counter-increment: list;
+      content: counter(list) ". ";
+    }
+  }
+}

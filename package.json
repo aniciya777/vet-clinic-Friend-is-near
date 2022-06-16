@@ -1,0 +1,55 @@
+{
+  "name": "friendisnear.ru",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Ветклиника и ветаптека «Друг рядом»",
+  "author": "Остапчук Анастасия и Ушакова Маргарита",
+  "engines": {
+    "node": "^18.3.0"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "postinstall": "npm install express",
+    "start": "node server.js",
+    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "dependencies": {
+    "core-js": "^3.23.1",
+    "express": "^5.0.0-beta.1",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/eslint-parser": "^7.18.2",
+    "@vue/cli-plugin-babel": "~5.0.4",
+    "@vue/cli-plugin-eslint": "~5.0.4",
+    "@vue/cli-service": "~5.0.4",
+    "@vue/compiler-sfc": "3.2.37",
+    "eslint": "^8.17.0",
+    "eslint-plugin-vue": "^9.1.0",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^13.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

@@ -1,0 +1,48 @@
+$border-radius-size: 14px;
+
+.card {
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: $border-radius-size + 5;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px rgba(50, 50, 50, 0.2);
+}
+
+.card-img__wrapper {
+  position: relative;
+  height: 230px;
+  border-top-left-radius: $border-radius-size;
+  border-top-right-radius: $border-radius-size;
+}
+
+.card-img {
+  width: 400px;
+}
+
+.card-name {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card-title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+}
+
+.card-body {
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+// .card-footer {
+//   margin-bottom: 16px;
+// }
