@@ -1,6 +1,6 @@
 import toHumanString from "human-readable-numbers";
 
-const defaultAvatarURL = "./static/svg/user-profile-default.svg";
+const defaultAvatarURL = "./assets/svg/user-profile-default.svg";
 
 const reviews = [
     {
