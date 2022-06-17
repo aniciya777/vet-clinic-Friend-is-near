@@ -8,12 +8,12 @@
     <div class="row doctor-component" v-for="item in items" :key="item.id">
       <div class="col-lg-8 col-sm-12">
         <div class="row align-items-center h-100">
-          <div class="col-4 text-center">
-            <div class="doctor-component__doctor-avatar">
+          <div class="col-xl-4 col-md-6 col-sm-12 text-center">
+            <p class="doctor-component__doctor-avatar">
               <img :src="item.avatar[250]" :alt="item.full_name">
-            </div>
+            </p>
           </div>
-          <div class="col-8">
+          <div class="col-xl-8 col-md-6 col-sm-12">
             <p class="m-0">
               {{ item.full_name }}
             </p>
