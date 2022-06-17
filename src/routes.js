@@ -4,6 +4,7 @@ const routerHistory = createWebHashHistory();
 
 import PageMain from "@/components/pages/main/PageMain";
 import PageDiscounts from "@/components/pages/discounts/PageDiscounts";
+import PageDoctors from "@/components/pages/doctors/PageDoctors";
 import PageError_404 from "@/components/pages/_errors/PageError_404";
 
 const routers = createRouter({
@@ -18,6 +19,11 @@ const routers = createRouter({
       path: '/discounts',
       name: 'discounts',
       component: PageDiscounts,
+    },
+    {
+      path: '/doctors',
+      name: 'doctors',
+      component: PageDoctors,
     },
     {
       path: '/:CatchAll(.*)',

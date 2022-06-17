@@ -1,0 +1,35 @@
+<template>
+  <PageDoctors_Block :items="managers.items" :title="managers.title" />
+  <PageDoctors_Block :items="doctors.items" :title="doctors.title" />
+</template>
+
+<script>
+import PageDoctors_Block from "@/components/pages/doctors/PageDoctors_Block";
+import {getClinicManagement} from "@/data/clinic_management";
+
+export default {
+  name: "PageDoctors",
+  components: {
+    PageDoctors_Block
+  },
+  data() {
+    return {
+      managers: {
+        title: "Руководители",
+        items: [],
+      },
+      doctors: {
+        title: "Врачи",
+        items: [],
+      },
+    };
+  },
+  beforeMount() {
+    this.managers.items = getClinicManagement();
+  }
+}
+</script>
+
+<style scoped lang="scss">
+
+</style>

@@ -15,9 +15,9 @@
     </h2>
     <br>
     <div class="row">
-      <div class="text-center col-sum-12 col-md-6 col-lg-3" v-for="service in popular_services" :key="service.title">
+      <div class="service-component text-center col-sum-12 col-md-6 col-lg-3" v-for="service in popular_services" :key="service.title">
         <p>
-          <img :src="service.image_url" :alt="service.title">
+          <img class="service-component__image" :src="service.image_url" :alt="service.title">
         </p>
         <p>
           {{ service.title }}
@@ -58,5 +58,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+  .service-component__image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
 </style>
