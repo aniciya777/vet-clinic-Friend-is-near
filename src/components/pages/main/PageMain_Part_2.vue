@@ -20,7 +20,7 @@
 
 export default {
   name: "PageMain_Part_2",
-  data () {
+  data() {
     return {
       title: "Индивидуальный подход к лечению каждого питомца",
     };

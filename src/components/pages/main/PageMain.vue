@@ -1,6 +1,6 @@
 <template>
-  <PageMain_Part_1 />
-  <PageMain_Part_2 />
+  <PageMain_Part_1/>
+  <PageMain_Part_2/>
 </template>
 
 <script>

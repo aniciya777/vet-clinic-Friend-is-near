@@ -1,6 +1,6 @@
 <template>
-  <PageDiscounts_Part_1 />
-  <PageDiscounts_Part_2 />
+  <PageDiscounts_Part_1/>
+  <PageDiscounts_Part_2/>
 </template>
 
 <script>

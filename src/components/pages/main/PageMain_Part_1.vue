@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="col text-center">
-        <img src="@/assets/big_logo.png">
+        <img src="@/assets/big_logo.png" :alt="title">
       </div>
     </div>
     <br>
@@ -62,7 +62,7 @@ import {getCountReviewsHuman, getRating, getRandomReview} from "@/data/reviews";
 
 export default {
   name: "PageMain_Part_1",
-  data () {
+  data() {
     return {
       title: "Ветклиника и ветаптека\n«Друг рядом»",
       phonenumber: app.phones[0].phone_number,
@@ -90,35 +90,35 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .review-component {
-    background: rgba(255, 255, 255, 0.46);
-    border-radius: 30px;
-    padding: 10px;
-    font-size: 23px;
-  }
+.review-component {
+  background: rgba(255, 255, 255, 0.46);
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 23px;
+}
 
-  .rating-component {
-    padding: 5px;
-    text-align: center;
-  }
+.rating-component {
+  padding: 5px;
+  text-align: center;
+}
 
-  .rating-component__rating {
-    font-size: 56px;
-  }
+.rating-component__rating {
+  font-size: 56px;
+}
 
-  .rating-component__count-reviews {
-    font-size: 20px;
-  }
+.rating-component__count-reviews {
+  font-size: 20px;
+}
 
-  .review-component__review-text {
-    margin-bottom: 24px;
-  }
+.review-component__review-text {
+  margin-bottom: 24px;
+}
 
-  .review-component__review-avatar {
-    border: 1px solid #000000;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
+.review-component__review-avatar {
+  border: 1px solid #000000;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
 </style>

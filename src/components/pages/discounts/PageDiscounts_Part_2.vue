@@ -53,7 +53,7 @@
 <script>
 export default {
   name: "PageDiscounts_Part_1",
-  data () {
+  data() {
     return {
       title: "Сезон активности клещей",
     };

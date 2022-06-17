@@ -20,7 +20,7 @@ import {app, links} from "@/_config";
 
 export default {
   name: "MainHeader",
-  data () {
+  data() {
     return {
       title: app.title,
       links,
@@ -30,9 +30,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .navbar-link__in-button {
-    background-image: url("@/assets/svg/button_cabinet.svg");
-    background-size: cover;
-    padding: 8px 10px;
-  }
+.navbar-link__in-button {
+  background-image: url("@/assets/svg/button_cabinet.svg");
+  background-size: cover;
+  padding: 8px 10px;
+}
 </style>
