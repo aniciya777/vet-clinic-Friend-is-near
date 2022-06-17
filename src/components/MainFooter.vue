@@ -1,8 +1,11 @@
 <template>
   <footer class="container footer">
-    <p>
-      Footer
-    </p>
+    <div class="row">
+
+    </div>
+    <div class="row">
+
+    </div>
   </footer>
 </template>
 
@@ -17,7 +20,7 @@ export default {
 
   .footer {
     margin-top: $header-footer-margin;
-    height: $footer-height;
+    min-height: $footer-height;
     background: linear-gradient(90deg, #D4FC79 0%, #96E6A1 100%);
     border-radius: 30px 30px 0 0;
     padding: 40px 40px 10px 40px;

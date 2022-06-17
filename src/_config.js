@@ -14,6 +14,23 @@ export const app = {
       phone_number: "+7(XXX) XXX-XX-XX",
     }
   ],
+  addresses: [
+    {
+      name: 'Основной',
+      address: 'г.\xa0Волжский, ул.\xa0им.\xa0Генерала Карбышева, д.\xa0110, подъезд\xa06',
+      opening_hours: "Ежедневно с 09.00 до 20.00\n" +
+                     "Перерыв: 13.30 - 14.00",
+      yandex_map_code: {
+        iframe: 'https://yandex.ru/map-widget/v1/?um=constructor%3Ac23a75c2b9e0270353f7eb82e8ea20ac65059209bdb2744d2842c5127e77cd03&amp;source=constructor',
+      },
+    },
+  ],
+  emails: [
+    {
+      name: 'Основной',
+      email: 'myemail@mail.ru',
+    },
+  ],
 };
 
 export const links = [

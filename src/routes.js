@@ -5,6 +5,8 @@ const routerHistory = createWebHashHistory();
 import PageMain from "@/components/pages/main/PageMain";
 import PageDiscounts from "@/components/pages/discounts/PageDiscounts";
 import PageDoctors from "@/components/pages/doctors/PageDoctors";
+import PageAbout from "@/components/pages/about/PageAbout";
+import PageContacts from "@/components/pages/contacts/PageContacts";
 import PageError_404 from "@/components/pages/_errors/PageError_404";
 
 const routers = createRouter({
@@ -24,6 +26,16 @@ const routers = createRouter({
       path: '/doctors',
       name: 'doctors',
       component: PageDoctors,
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: PageAbout,
+    },
+    {
+      path: '/contacts',
+      name: 'contacts',
+      component: PageContacts,
     },
     {
       path: '/:CatchAll(.*)',
