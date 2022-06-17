@@ -1,6 +1,10 @@
 import toHumanString from "human-readable-numbers";
+import {truncateString} from "./utils";
 
 const defaultAvatarURL = "./assets/svg/user-profile-default.svg";
+const maxReviewTextLength = 64;
+const maxFullnameLength = 64;
+
 
 const reviews = [
   {
@@ -64,12 +68,13 @@ export function getRandomReview(old_review = null) {
     };
   }
   const old_id = (old_review === null) ? null : old_review.id;
-  let result;
+  let result = {};
   // Генерация нового отзыва, чтобы он не совпадал с предыдущим
   do {
-    result = reviews[Math.floor(Math.random() * n)];
+    Object.assign(result, reviews[Math.floor(Math.random() * n)]);
   } while (n > 1 && result.id === old_id);
-  result.fullname = result.sname + ' ' + result.name;
+  result.fullname = truncateString(result.sname + ' ' + result.name, maxFullnameLength);
+  result.text = truncateString(result.text, maxReviewTextLength)
   if (result.avatar === null) {
     result.avatar = defaultAvatarURL;
   }
