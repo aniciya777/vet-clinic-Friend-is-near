@@ -1,0 +1,45 @@
+$carouselNavWidth            : 90px;
+
+.carousel__prev, .carousel__next {
+  background: transparent;
+  color: black;
+  border-radius: 0;
+  width: $carouselNavWidth;
+  height: $carouselNavWidth;
+  border: $carouselNavWidth/2 solid transparent;
+}
+
+.carousel__prev {
+  border-right: $carouselNavWidth/2 solid white;
+}
+
+.carousel__next {
+  border-left: $carouselNavWidth/2 solid white;
+}
+
+.carousel__icon {
+  display: none;
+}
+
+.carousel__item {
+  padding: 0 $carouselNavWidth * 0.7;
+
+  &, & img {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.carousel__pagination-button {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: #555 0 0 3px 0;
+  width: 30px;
+}
+
+.carousel__pagination-button--active {
+  background-color: white;
+}

@@ -16,13 +16,14 @@
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
-    "bootstrap": "^5.2.0-beta1",
     "@popperjs/core": "^2.11.5",
+    "bootstrap": "^5.2.0-beta1",
     "core-js": "^3.23.1",
     "express": "^5.0.0-beta.1",
     "human-readable-numbers": "^0.9.5",
     "vue": "^3.2.37",
-    "vue-router": "^4.0.16"
+    "vue-router": "^4.0.16",
+    "vue3-carousel": "^0.1.40"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
