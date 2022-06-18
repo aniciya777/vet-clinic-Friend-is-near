@@ -17,6 +17,14 @@ $carouselNavWidth            : 90px;
   border-left: $carouselNavWidth/2 solid white;
 }
 
+.carousel__prev--in-active {
+  border-right-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel__next--in-active {
+  border-left-color: rgba(255, 255, 255, 0.5);
+}
+
 .carousel__icon {
   display: none;
 }
