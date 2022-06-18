@@ -8,19 +8,18 @@ html {
   color: $mainFontColor;
   height: 100%;
   @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
+    font-size: $mainFontSize * 1;
   }
   @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
+    font-size: $mainFontSize * 0.8;
   }
   @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
+    font-size: $mainFontSize * 0.6;
   }
 }
 
 body {
   font-family: $mainFont;
-  font-size: $mainFontSize;
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -130,16 +129,32 @@ section,
   border-radius: 30px;
   padding: 54px 48px;
   margin-top: $header-footer-margin;
+
+  @media screen and (max-width: $lgDesktopWidth) {
+    padding: 54px 48px;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 40px 36px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    padding: 26px 24px;
+  }
+  @media screen and (max-width: $smTableWidth) {
+    padding: 15px 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 15px 12px;
+  }
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 2.222em;
   white-space: break-spaces;
   margin-bottom: 0.5em;
 }
 
 h2 {
-  font-size: 46px;
+  font-size: 1.7em;
 }
 
 p {
