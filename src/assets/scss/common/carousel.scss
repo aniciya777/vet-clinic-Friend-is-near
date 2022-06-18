@@ -1,28 +1,30 @@
-$carouselNavWidth            : 90px;
+$carouselNavWidth            : 68px;
+$carouselNavHeight           : 78px;
+
+.carousel {
+  position: relative;
+}
 
 .carousel__prev, .carousel__next {
   background: transparent;
-  color: black;
   border-radius: 0;
-  width: $carouselNavWidth;
-  height: $carouselNavWidth;
-  border: $carouselNavWidth/2 solid transparent;
+  width: 5%;
+  max-width: $carouselNavWidth;
+  height: $carouselNavHeight;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .carousel__prev {
-  border-right: $carouselNavWidth/2 solid white;
+  background-image: url("@/assets/svg/carousel_btn_prev.svg");
 }
 
 .carousel__next {
-  border-left: $carouselNavWidth/2 solid white;
+  background-image: url("@/assets/svg/carousel_btn_next.svg");
 }
 
-.carousel__prev--in-active {
-  border-right-color: rgba(255, 255, 255, 0.5);
-}
-
-.carousel__next--in-active {
-  border-left-color: rgba(255, 255, 255, 0.5);
+.carousel__prev--in-active, .carousel__next--in-active {
+  opacity: 0.3;
 }
 
 .carousel__icon {
@@ -30,7 +32,7 @@ $carouselNavWidth            : 90px;
 }
 
 .carousel__item {
-  padding: 0 $carouselNavWidth * 0.7;
+  margin: 0 5%;
 
   &, & img {
     width: 100%;
