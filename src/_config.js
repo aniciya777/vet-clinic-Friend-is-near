@@ -31,6 +31,18 @@ export const app = {
       email: 'myemail@mail.ru',
     },
   ],
+  social: {
+    vk: {
+      name: 'Вконтаке',
+      url: 'https://vk.com/',
+      icon_url: './assets/images/social/vk_orig_50.png',
+    },
+    whatsapp: {
+      name: 'WhatsApp',
+      url: 'https://www.whatsapp.com/?lang=ru',
+      icon_url: './assets/images/social/whatsapp_50.png',
+    }
+  },
 };
 
 export const links = [
