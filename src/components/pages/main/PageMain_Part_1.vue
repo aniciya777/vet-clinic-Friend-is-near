@@ -94,7 +94,7 @@ export default {
   background: rgba(255, 255, 255, 0.46);
   border-radius: 30px;
   padding: 10px;
-  font-size: 23px;
+  font-size: 0.85rem;
 }
 
 .rating-component {
@@ -103,15 +103,15 @@ export default {
 }
 
 .rating-component__rating {
-  font-size: 56px;
+  font-size: 2.075rem;
 }
 
 .rating-component__count-reviews {
-  font-size: 20px;
+  font-size: 0.74rem;
 }
 
 .review-component__review-text {
-  margin-bottom: 24px;
+  margin-bottom: 0.889rem;
 }
 
 .review-component__review-avatar {

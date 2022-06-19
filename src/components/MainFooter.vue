@@ -71,6 +71,22 @@ export default {
     background: linear-gradient(90deg, #D4FC79 0%, #96E6A1 100%);
     border-radius: 30px 30px 0 0;
     padding: 40px 40px 10px 40px;
+
+    @media screen and (max-width: $lgDesktopWidth) {
+      padding: 40px 40px 10px 40px;
+    }
+    @media screen and (max-width: $smDesktopWidth) {
+      padding: 36px 40px 10px 40px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      padding: 24px 26px 10px 26px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      padding: 15px 15px 10px 15px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      padding: 12px 15px 10px 15px;
+    }
   }
 
   .footer__logo {
@@ -98,7 +114,7 @@ export default {
   .footer__link-item {
     a {
       color: $g-999;
-      font-size: 20px;
+      font-size: 0.74rem;
     }
   }
 </style>

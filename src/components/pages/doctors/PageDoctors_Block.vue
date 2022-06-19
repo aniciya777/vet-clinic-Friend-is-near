@@ -9,7 +9,7 @@
       <div class="col-lg-8 col-sm-12">
         <div class="row align-items-center h-100">
           <div class="col-xl-4 col-md-6 col-sm-12 text-center">
-            <p class="doctor-component__doctor-avatar">
+            <p class="doctor-component__doctor-avatar text-center">
               <img :src="item.avatar[250]" :alt="item.full_name">
             </p>
           </div>
@@ -55,6 +55,7 @@ export default {
   .doctor-component__doctor-avatar {
     border-radius: 50%;
     overflow: hidden;
+    display: inline-block;
 
     img {
       object-fit: cover;
