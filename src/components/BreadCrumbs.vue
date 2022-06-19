@@ -42,7 +42,8 @@ export default {
   }
 
   .breadcrumbs-component__item {
-    color: $mainFontColor;
+    color: $breadcrumbs_gray;
+    text-decoration: underline;
   }
 
   .breadcrumbs-component__separator {
@@ -51,6 +52,6 @@ export default {
   }
 
   .breadcrumbs-component__item_last {
-    color: $breadcrumbs_gray;
+    color: $mainFontColor;
   }
 </style>
