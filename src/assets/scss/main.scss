@@ -166,5 +166,18 @@ p {
   margin-left: 1rem;
 }
 
+.page-error {
+  h1 {
+    &.error_code {
+      font-size: 6.3rem;
+      margin-bottom: 0.4em;
+    }
+  }
+
+  p {
+    font-size: 1.333rem;
+  }
+}
+
 @import './common/_common';
 @import './helpers/_helpers';
