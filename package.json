@@ -22,6 +22,7 @@
     "express": "^5.0.0-beta.1",
     "human-readable-numbers": "^0.9.5",
     "vue": "^3.2.37",
+    "vue-3-breadcrumbs": "^2.0.0",
     "vue-router": "^4.0.16",
     "vue3-carousel": "^0.1.40"
   },

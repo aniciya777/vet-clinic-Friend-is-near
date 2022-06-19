@@ -18,41 +18,65 @@ const routers = createRouter({
       path: '/',
       name: 'main',
       component: PageMain,
+      meta: {
+        breadcrumb: 'Главная',
+      },
     },
     {
       path: '/discounts',
       name: 'discounts',
       component: PageDiscounts,
+      meta: {
+        breadcrumb: 'Акции',
+      },
     },
     {
       path: '/doctors',
       name: 'doctors',
       component: PageDoctors,
+      meta: {
+        breadcrumb: 'Врачи',
+      },
     },
     {
       path: '/about',
       name: 'about',
       component: PageAbout,
+      meta: {
+        breadcrumb: 'О клинике',
+      },
     },
     {
       path: '/contacts',
       name: 'contacts',
       component: PageContacts,
+      meta: {
+        breadcrumb: 'Контакты',
+      },
     },
     {
       path: '/info',
       name: 'info',
       component: PageInfo,
+      meta: {
+        breadcrumb: 'Информация для владельцев',
+      },
     },
     {
       path: '/privacy_policy',
       name: 'privacy_policy',
       component: PagePrivacyPolicy,
+      meta: {
+        breadcrumb: 'Политика конфиденциальности',
+      },
     },
     {
       path: '/:CatchAll(.*)',
       name: 'error_404',
       component: PageError_404,
+      meta: {
+        breadcrumb: false,
+      },
     },
   ],
 });

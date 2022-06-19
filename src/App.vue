@@ -2,6 +2,7 @@
   <div class="wrapper">
     <MainHeaderVue />
     <div class="wrapper-content">
+      <BreadCrumbs />
       <router-view />
       <MainFooter />
     </div>
@@ -11,12 +12,14 @@
 <script>
 import MainHeaderVue from "@/components/MainHeader";
 import MainFooter from "@/components/MainFooter";
+import BreadCrumbs from "@/components/BreadCrumbs";
 
 export default {
   name: 'App',
   components: {
     MainHeaderVue,
-    MainFooter
+    MainFooter,
+    BreadCrumbs,
   }
 }
 </script>
