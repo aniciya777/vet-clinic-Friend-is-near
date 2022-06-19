@@ -30,14 +30,14 @@
         </div>
         <div class="row">
           <div class="col-sm-12 col-lg-6 footer__link-item">
-            <a href="" target="_blank">
+            <router-link to="info">
               Информация для владельцев
-            </a>
+            </router-link>
           </div>
           <div class="col-sm-12 col-lg-6 footer__link-item">
-            <a href="" target="_blank">
+            <router-link to="privacy_policy">
               Политика конфиденциальности
-            </a>
+            </router-link>
           </div>
         </div>
       </div>

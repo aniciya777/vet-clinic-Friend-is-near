@@ -8,6 +8,8 @@ import PageDoctors from "@/components/pages/doctors/PageDoctors";
 import PageAbout from "@/components/pages/about/PageAbout";
 import PageContacts from "@/components/pages/contacts/PageContacts";
 import PageError_404 from "@/components/pages/_errors/PageError_404";
+import PageInfo from "@/components/pages/info/PageInfo";
+import PagePrivacyPolicy from "@/components/pages/privacy_policy/PagePrivacyPolicy";
 
 const routers = createRouter({
   history: routerHistory,
@@ -36,6 +38,16 @@ const routers = createRouter({
       path: '/contacts',
       name: 'contacts',
       component: PageContacts,
+    },
+    {
+      path: '/info',
+      name: 'info',
+      component: PageInfo,
+    },
+    {
+      path: '/privacy_policy',
+      name: 'privacy_policy',
+      component: PagePrivacyPolicy,
     },
     {
       path: '/:CatchAll(.*)',
