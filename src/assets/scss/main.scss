@@ -148,13 +148,13 @@ section,
 }
 
 h1 {
-  font-size: 2.222rem;
+  font-size: rel_font_size(60px);
   white-space: break-spaces;
   margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: rel_font_size(46px);
 }
 
 p {
@@ -169,13 +169,13 @@ p {
 .page-error {
   h1 {
     &.error_code {
-      font-size: 6.3rem;
+      font-size: rel_font_size(170px);
       margin-bottom: 0.4em;
     }
   }
 
   p {
-    font-size: 1.333rem;
+    font-size: rel_font_size(36px);
   }
 }
 

@@ -90,35 +90,37 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.review-component {
-  background: rgba(255, 255, 255, 0.46);
-  border-radius: 30px;
-  padding: 10px;
-  font-size: 0.85rem;
-}
+  @import '@/assets/scss/utils/vars';
 
-.rating-component {
-  padding: 5px;
-  text-align: center;
-}
+  .review-component {
+    background: rgba(255, 255, 255, 0.46);
+    border-radius: 30px;
+    padding: 10px;
+    font-size: rel_font_size(23px);
+  }
 
-.rating-component__rating {
-  font-size: 2.075rem;
-}
+  .rating-component {
+    padding: 5px;
+    text-align: center;
+  }
 
-.rating-component__count-reviews {
-  font-size: 0.74rem;
-}
+  .rating-component__rating {
+    font-size: rel_font_size(56px);
+  }
 
-.review-component__review-text {
-  margin-bottom: 0.889rem;
-}
+  .rating-component__count-reviews {
+    font-size: rel_font_size(20px);
+  }
 
-.review-component__review-avatar {
-  border: 1px solid #000000;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  overflow: hidden;
-}
+  .review-component__review-text {
+    margin-bottom: rel_font_size(23px);
+  }
+
+  .review-component__review-avatar {
+    border: 1px solid #000000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
 </style>

@@ -49,3 +49,8 @@ $border-lightex          : #F2F6FC;
 $header-height           : 69px;
 $footer-height           : 444px;
 $header-footer-margin    : 43px;
+
+
+@function rel_font_size($size) {
+  @return ($size / $mainFontSize) * 1rem;
+}

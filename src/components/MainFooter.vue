@@ -114,7 +114,7 @@ export default {
   .footer__link-item {
     a {
       color: $g-999;
-      font-size: 0.74rem;
+      font-size: rel_font_size(20px);
     }
   }
 </style>
