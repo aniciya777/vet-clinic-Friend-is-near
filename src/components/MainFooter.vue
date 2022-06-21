@@ -57,6 +57,7 @@ export default {
   data () {
     return {
       socials: app.social,
+      title: app.title,
     };
   },
 }

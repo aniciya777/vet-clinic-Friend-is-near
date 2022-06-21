@@ -1,37 +1,10 @@
-import toHumanString from "human-readable-numbers";
+import HRNumbers from "human-readable-numbers";
 import {truncateString} from "./utils";
+import {reviews} from '@/seeders/reviews.js';
 
 const defaultAvatarURL = "./assets/svg/user-profile-default.svg";
 const maxReviewTextLength = 64;
 const maxFullnameLength = 64;
-
-
-const reviews = [
-  {
-    id: 1,
-    text: "Очень конпетентные врачи и удобный магазин с доставкой до дома!",
-    sname: "Фамилия1",
-    name: "Имя1",
-    avatar: null,
-    rating: 4.9,
-  },
-  {
-    id: 2,
-    text: "Отличные врачи и приемлимые цены",
-    sname: "Фамилия2",
-    name: "Имя2",
-    avatar: null,
-    rating: 5,
-  },
-  {
-    id: 3,
-    text: "Всё супер",
-    sname: "Фамилия3",
-    name: "Имя3",
-    avatar: null,
-    rating: 4.8,
-  },
-];
 
 export function getCountReviews() {
   return reviews.length;
@@ -41,7 +14,7 @@ export function getCountReviewsHuman() {
   var n = getCountReviews();
   if (n > 10) {
     n = Math.floor(n / 10) * 10;
-    return toHumanString(n) + '+';
+    return HRNumbers.toHumanString(n) + '+';
   } else {
     return n.toString();
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="container main-container">
-    <Carousel :settings='settings' :breakpoints='breakpoints'>
+    <Carousel>
       <Slide v-for='slide in images' :key='slide'>
         <div class='carousel__item'>
           <img :src="dist + slide" alt="">
