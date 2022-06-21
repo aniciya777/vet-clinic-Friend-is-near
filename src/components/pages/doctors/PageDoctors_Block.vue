@@ -6,7 +6,7 @@
       </h1>
     </div>
     <div class="row doctor-component" v-for="item in items" :key="item.id">
-      <div class="col-lg-8 col-sm-12">
+      <div :class="{'col-lg-8': showDiploma, 'col-sm-12': showDiploma, 'col-12': !showDiploma}">
         <div class="row align-items-center h-100">
           <div class="col-xl-4 col-md-6 col-sm-12 text-center">
             <p class="doctor-component__doctor-avatar text-center">
@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center h-100">
+      <div v-if="showDiploma" class="col-lg-4 col-sm-12 text-center h-100">
         <a :href="item.diploma.orig" target="_blank">
           <img :src="item.diploma[400]" :alt="item.full_name + ' - диплом'">
         </a>
@@ -36,8 +36,19 @@
 export default {
   name: "PageDoctors_Block",
   props: {
-    title: String,
-    items: Array,
+    title: {
+      type: String,
+      required: true,
+    },
+    items: {
+      type: Array,
+      required: true,
+    },
+    showDiploma: {
+      type: Boolean,
+      required: false,
+      default: false,
+    }
   }
 }
 </script>

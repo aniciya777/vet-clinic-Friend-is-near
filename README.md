@@ -56,6 +56,20 @@ npm run lint
 
 ---
 
+# Veterinary clinic and veterinary pharmacy "Friend near"
+
+A project created within the framework of the discipline "Programming Languages and Methods"
+by second-year students of the Volzhsky branch of Volga State University.
+
+Authors:
+
+* **Anastasia Ostapchuk** - *PMI-201*
+* **Ushakova Margarita** - *PMI-202*
+
+There is also [a link to a working website](https://friendisnear.herokuapp.com).
+
+---
+
 ## Project setup
 ```
 npm install

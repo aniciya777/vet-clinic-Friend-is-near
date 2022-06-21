@@ -1,19 +1,10 @@
 const avatar_sizes = ['orig', '250'];
 const diploma_sizes = ['orig', '400'];
 
+import {management} from "@/seeders/management";
+
 export function getClinicManagement() {
-  const data = [
-    {
-      id: 1,
-      full_name: 'Ушакова Маргарита Андреевна',
-      post: 'Руководитель клиники',
-    },
-    {
-      id: 2,
-      full_name: 'Остапчук Анастасия Витальевна',
-      post: 'Главный врач',
-    }
-  ];
+  const data = management;
 
   data.forEach((element) => {
     element.avatar = {};
