@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <MainHeaderVue />
+    <ModalRegisterLogin />
     <div class="wrapper-content">
       <BreadCrumbs />
       <router-view />
@@ -13,6 +14,7 @@
 import MainHeaderVue from "@/components/MainHeader";
 import MainFooter from "@/components/MainFooter";
 import BreadCrumbs from "@/components/BreadCrumbs";
+import ModalRegisterLogin from "@/components/UI/ModalRegisterLogin";
 
 export default {
   name: 'App',
@@ -20,6 +22,7 @@ export default {
     MainHeaderVue,
     MainFooter,
     BreadCrumbs,
+    ModalRegisterLogin,
   }
 }
 </script>

@@ -5,7 +5,12 @@
         <img src="@/assets/logo.png" alt="logo">
       </router-link>
       <div class="navbar-item" v-for="link in links" :key="link.alias">
-        <p :class="[{ 'navbar-link__in-button': link.in_button}]">
+        <p v-if="link.in_button" class="navbar-link__in-button">
+          <span data-bs-toggle="modal" data-bs-target="#ModalRegisterLogin">
+            {{ link.title }}
+          </span>
+        </p>
+        <p v-else>
           <router-link class="navbar-link" :to="link.url">
             {{ link.title }}
           </router-link>

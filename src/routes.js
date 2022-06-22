@@ -10,9 +10,14 @@ import PageContacts from "@/components/pages/contacts/PageContacts";
 import PageError_404 from "@/components/pages/_errors/PageError_404";
 import PageInfo from "@/components/pages/info/PageInfo";
 import PagePrivacyPolicy from "@/components/pages/privacy_policy/PagePrivacyPolicy";
+import PageRegister from "@/components/pages/register/PageRegister";
+import PageAuthorization from "@/components/pages/authorization/PageAuthorization";
 
 const routers = createRouter({
   history: routerHistory,
+  scrollBehavior() {
+    document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
+  },
   routes: [
     {
       path: '/',
@@ -68,6 +73,22 @@ const routers = createRouter({
       component: PagePrivacyPolicy,
       meta: {
         breadcrumb: 'Политика конфиденциальности',
+      },
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: PageRegister,
+      meta: {
+        breadcrumb: 'Регистрация',
+      },
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: PageAuthorization,
+      meta: {
+        breadcrumb: 'Вход в личный кабинет',
       },
     },
     {
