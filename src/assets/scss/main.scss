@@ -180,5 +180,9 @@ p {
   }
 }
 
+a {
+  color: $mainFontColor;
+}
+
 @import './common/_common';
 @import './helpers/_helpers';

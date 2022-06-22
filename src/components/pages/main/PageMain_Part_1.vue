@@ -50,7 +50,9 @@
         Проконсультироваться с ведущим ветеринаром клиники можно по телефону
       </p>
       <p>
-        {{ phonenumber }}
+        <a :href="`tel:${phonenumber}`">
+          {{ phonenumber }}
+        </a>
       </p>
     </div>
   </div>

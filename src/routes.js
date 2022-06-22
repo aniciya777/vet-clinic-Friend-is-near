@@ -92,12 +92,18 @@ const routers = createRouter({
       },
     },
     {
-      path: '/:CatchAll(.*)',
+      path: '/404',
       name: 'error_404',
       component: PageError_404,
       meta: {
         breadcrumb: false,
       },
+    },
+    {
+      path: '/:CatchAll(.*)',
+      redirect: {
+        name: 'error_404',
+      }
     },
   ],
 });

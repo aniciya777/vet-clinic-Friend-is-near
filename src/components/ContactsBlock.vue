@@ -9,13 +9,17 @@
     <div class="contact-component__item" v-if="phone">
       <p class="m-0">Телефон:</p>
       <p>
-        {{ phone_value }}
+        <a :href="`tel:${phone_value}`">
+          {{ phone_value }}
+        </a>
       </p>
     </div>
     <div class="contact-component__item" v-if="email">
       <p class="m-0">E-mail:</p>
       <p>
-        {{ email_value }}
+        <a :href="`mailto:${email_value}`">
+          {{ email_value }}
+        </a>
       </p>
     </div>
     <div class="contact-component__item" v-if="opening_hours">
