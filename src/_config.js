@@ -1,13 +1,14 @@
 export const process = {
-  dev: true,
+  dev: false,
 };
 
 export const site = {
-  site: process.dev ? "http://localhost:8080" : "https://friendisnear.herokuapp.com/",
+  site: process.dev ? "http://localhost:8080" : "https://friendisnear.herokuapp.com",
 };
 
 export const app = {
   title: "Ветклиника и ветаптека «Друг рядом»",
+  organization: "\"Ветклиника и ветаптека «Друг рядом»\" (индивидуальный предприниматель Ушакова М.А.)",
   phones: [
     {
       name: "Основной",
