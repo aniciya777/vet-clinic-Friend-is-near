@@ -1,0 +1,7 @@
+Flask
+Flask-Login
+SQLAlchemy
+alembic
+Flask-Admin
+flask-babelex
+waitress
