@@ -1,9 +1,9 @@
 <template>
-  <div class="row">
+  <div class="row component-form">
     <div :class="{ 'col-sm-12': true, 'col-lg-7': imageRight }">
       <form @submit.prevent>
         <slot>Форма по-умолчанию</slot>
-        <div class="form__submit">
+        <div class="component-form__submit">
           <input type="submit" :value="submitText">
         </div>
       </form>
@@ -27,12 +27,7 @@ export default {
       type: String,
       required: false,
       default: '',
-    },
-    imageBackground: {
-      type: String,
-      required: false,
-      default: '',
-    },
+    }
   },
 }
 </script>
@@ -44,7 +39,7 @@ export default {
   $height: 50px;
   $border: 5px;
 
-  .form__submit {
+  .component-form__submit {
     margin: 15px 0;
     height: $height;
     border-radius: $borderRadius;
@@ -64,4 +59,7 @@ export default {
     }
   }
 
+  .component-form {
+    z-index: 1;
+  }
 </style>

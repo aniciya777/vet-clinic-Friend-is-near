@@ -41,9 +41,6 @@ export default {
     onSubmit () {
       alert(JSON.stringify(this.form));
     },
-    getValue (event) {
-      return event.target.value;
-    },
     setForm (event) {
       this.form[event.name] = event.value;
     },
