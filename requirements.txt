@@ -4,4 +4,3 @@ SQLAlchemy
 alembic
 Flask-Admin
 flask-babelex
-waitress
