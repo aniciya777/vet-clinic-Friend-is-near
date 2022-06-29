@@ -8,9 +8,10 @@
       <br>
     </div>
     <div v-if="loadingServices" class="row">
-      <div class="d-flex align-items-center">
-        <strong>Загрузка...</strong>
-        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Загрузка...</span>
+        </div>
       </div>
     </div>
     <div v-else-if="services && services.length > 0" class="row">
@@ -33,19 +34,23 @@
       <p>Ничего не найдено</p>
     </div>
   </div>
+  <ModalServiceInfo :service="modalService" />
 </template>
 
 <script>
 import UIFormInput from "@/components/UI/UIFormInput";
+import ModalServiceInfo from "@/components/UI/ModalServiceInfo";
 
 export default {
   name: "ServicesBlock",
   components: {
     UIFormInput,
+    ModalServiceInfo
   },
   data () {
     return {
       valueSearch: '',
+      modalService: {},
     };
   },
   props: {
@@ -77,7 +82,7 @@ export default {
       this.valueSearch = event.value.trim().toLowerCase();
     },
     handlerClickOnCardService(service) {
-      console.log(service)
+      this.modalService = service;
     },
   }
 }

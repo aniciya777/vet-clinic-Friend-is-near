@@ -1,27 +1,48 @@
 <template>
-  <ModalWindow id="ModalServiceInfo" showCloseIcon vertical-centred title="s">
-    <div class="text-center">
+  <div v-if="service">
+    <ModalWindow id="ModalServiceInfo" showCloseIcon vertical-centred show-header scrolled showFooter :title="service.title">
+      <template v-slot:default>
+        <div class="text-center">
+          <img :src="service.img" :alt="service.title">
+          <p>{{ service.description }}</p>
 
-      <br>
-    </div>
-  </ModalWindow>
+        </div>
+      </template>
+      <template v-slot:footer>
+        <div class="row">
+          <div class="col-6">
+            <h2>{{ service.price }}&nbsp;₽</h2>
+          </div>
+          <div class="col-6">
+            <p class="navbar-link__in-button">
+              <span>
+                Записаться
+              </span>
+            </p>
+          </div>
+        </div>
+      </template>
+    </ModalWindow>
+  </div>
 </template>
 
 <script>
 import ModalWindow from "@/components/UI/ModalWindow";
-import {Modal} from 'bootstrap';
 
 export default {
   name: "ModalServiceInfo",
   components: {
     ModalWindow,
   },
-  mounted () {
-    this.modal = new Modal('#ModalServiceInfo');
+  props: {
+    service: {
+      type: Object,
+      required: true,
+    },
   },
   methods: {
     close() {
-      this.modal.hide();
+      // this.modal.hide();
     }
   }
 }
