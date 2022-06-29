@@ -6,6 +6,8 @@ export const site = {
   site: process.dev ? "http://localhost:8080" : "https://friendisnear.herokuapp.com",
 };
 
+export const api_url = 'http://localhost/api/v1.0/'
+
 export const app = {
   title: "Ветклиника и ветаптека «Друг рядом»",
   organization: "\"Ветклиника и ветаптека «Друг рядом»\" (индивидуальный предприниматель Ушакова М.А.)",
@@ -81,11 +83,5 @@ export const links = [
     title: "Контакты",
     alias: "contacts",
     url: "/contacts"
-  },
-  {
-    title: "Личный кабинет",
-    alias: "cabinet",
-    url: "/cabinet",
-    in_button: true,
   }
 ];

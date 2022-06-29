@@ -44,8 +44,25 @@
   }
 }
 
+$inButtonBorderRadius: 30px;
+$inButtonHeight: 50px;
+$inButtonBorder: 5px;
+
 .navbar-link__in-button {
-  background-image: url("@/assets/svg/button_cabinet.svg");
-  background-size: cover;
-  padding: 8px 10px;
+  height: $inButtonHeight;
+  border-radius: $inButtonBorderRadius;
+  padding: $inButtonBorder;
+  background: linear-gradient(#D3FB79, #96E6A1);
+  width: fit-content;
+
+  span, a {
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: $inButtonBorderRadius * ($inButtonHeight - 2 * $inButtonBorder) / $inButtonHeight;
+    background-color: $g-0;
+    height: $inButtonHeight - 2 * $inButtonBorder;
+    width: auto;
+    border: none;
+    display: inline-block;
+  }
 }

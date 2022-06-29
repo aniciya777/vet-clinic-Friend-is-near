@@ -12,6 +12,7 @@ import PageInfo from "@/components/pages/info/PageInfo";
 import PagePrivacyPolicy from "@/components/pages/privacy_policy/PagePrivacyPolicy";
 import PageRegister from "@/components/pages/register/PageRegister";
 import PageAuthorization from "@/components/pages/authorization/PageAuthorization";
+import PageServices from "@/components/pages/services/PageServices";
 
 const routers = createRouter({
   history: routerHistory,
@@ -57,6 +58,14 @@ const routers = createRouter({
       component: PageContacts,
       meta: {
         breadcrumb: 'Контакты',
+      },
+    },
+    {
+      path: '/services',
+      name: 'services',
+      component: PageServices,
+      meta: {
+        breadcrumb: 'Услуги',
       },
     },
     {

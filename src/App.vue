@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <MainHeaderVue />
+    <MainHeaderVue :isLoggedIn="isLoggedIn" />
     <ModalRegisterLogin />
     <div class="wrapper-content">
       <BreadCrumbs />
@@ -16,13 +16,40 @@ import MainFooter from "@/components/MainFooter";
 import BreadCrumbs from "@/components/BreadCrumbs";
 import ModalRegisterLogin from "@/components/UI/ModalRegisterLogin";
 
+import Axios from 'axios';
+
 export default {
   name: 'App',
+  data () {
+    return {
+
+    };
+  },
   components: {
     MainHeaderVue,
     MainFooter,
     BreadCrumbs,
     ModalRegisterLogin,
+  },
+  mounted() {
+    if (this.token) {
+      Axios.defaults.headers.common['Authorization'] = this.token;
+    }
+  },
+  computed: {
+    token: function () {
+      return this.$cookies.get('token') || '';
+    },
+    isLoggedIn: function (){
+      return !!this.token;
+    }
+  },
+  watch: {
+    token: {
+      handler(val){
+        this.$cookies.set('token', val);
+      }
+    }
   }
 }
 </script>
