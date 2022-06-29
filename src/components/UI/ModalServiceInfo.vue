@@ -15,7 +15,7 @@
           </div>
           <div class="col-6">
             <p class="navbar-link__in-button">
-              <span>
+              <span @click="handleButtonClick(service.id)">
                 Записаться
               </span>
             </p>
@@ -28,9 +28,18 @@
 
 <script>
 import ModalWindow from "@/components/UI/ModalWindow";
+import { Modal } from "bootstrap";
 
 export default {
   name: "ModalServiceInfo",
+  data () {
+    return {
+      modal: null,
+    };
+  },
+  mounted() {
+    this.modal = new Modal('#ModalServiceInfo');
+  },
   components: {
     ModalWindow,
   },
@@ -41,9 +50,14 @@ export default {
     },
   },
   methods: {
+    handleButtonClick(serviceId) {
+      this.close();
+      console.log('/services/appointment/' + serviceId);
+      this.$router.push('/services/appointment/' + serviceId);
+    },
     close() {
-      // this.modal.hide();
-    }
+      this.modal.hide();
+    },
   }
 }
 </script>
