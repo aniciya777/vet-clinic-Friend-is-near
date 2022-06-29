@@ -14,7 +14,7 @@ app.config['SECRET_KEY'] = SECRET_KEY
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
-admin = Admin(app, template_mode='bootstrap3', name='Административная панель')
+admin = Admin(app, template_mode='bootstrap4', name='Панель администратора')
 admin.add_view(UserAdminModelView(User, session, name='Пользователи'))
 admin.add_view(RoleAdminModelView(Roles, session, name='Роли'))
 admin.add_view(ServicesAdminModelView(Services, session, name='Услуги'))

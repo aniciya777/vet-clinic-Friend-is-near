@@ -24,7 +24,7 @@ export const store = createStore({
       state.services = services
     },
     changeLoadingServicesState(state, loading) {
-      state.loading = loading
+      state.loadingServices = loading
     }
   }
 });

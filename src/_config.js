@@ -6,7 +6,7 @@ export const site = {
   site: process.dev ? "http://localhost:8080" : "https://friendisnear.herokuapp.com",
 };
 
-export const api_url = 'http://localhost/api/v1.0/'
+export const api_url = 'https://friendisnear.herokuapp.com/api/v1.0/'
 
 export const app = {
   title: "Ветклиника и ветаптека «Друг рядом»",
