@@ -14,7 +14,13 @@
       </div>
     </div>
     <div v-else-if="services && services.length > 0" class="row">
-      <div class="service-component text-center col-sum-12 col-md-6 col-lg-3" v-for="service in services" :key="service.id">
+      <div
+        class="service-component text-center col-sum-12 col-md-6 col-lg-3"
+        v-for="service in services"
+        :key="service.id"
+        @click="handlerClickOnCardService(service)"
+        data-bs-toggle="modal" data-bs-target="#ModalServiceInfo"
+      >
         <p>
           <img class="service-component__image" :src="service.img" :alt="service.title">
         </p>
@@ -70,11 +76,43 @@ export default {
     setForm (event) {
       this.valueSearch = event.value.trim().toLowerCase();
     },
+    handlerClickOnCardService(service) {
+      console.log(service)
+    },
   }
 }
 </script>
 
 <style scoped lang="scss">
+  $animationShift: 10px;
+  $animationDuration: 0.5s;
+
+  .service-component {
+    position: relative;
+    transition-property: top;
+    transition-duration: $animationDuration;
+    top: 0;
+    cursor: pointer;
+    img, p {
+      transition-duration: $animationDuration;
+    }
+    img {
+      transition-property: box-shadow;
+    }
+    p {
+      transition-property: text-shadow;
+    }
+    &:hover {
+      top: -10px;
+      img {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+      }
+      p {
+        text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
   .service-component__image {
     width: 300px;
     height: 300px;

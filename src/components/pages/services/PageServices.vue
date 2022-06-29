@@ -9,15 +9,18 @@
       <ServicesBlock :hasSearch="true" />
     </div>
   </div>
+  <ModalServiceInfo />
 </template>
 
 <script>
 import ServicesBlock from "@/components/ServicesBlock";
+import ModalServiceInfo from "@/components/UI/ModalServiceInfo";
 
 export default {
   name: "PageServices",
   components: {
     ServicesBlock,
+    ModalServiceInfo
   },
   data () {
     return {
