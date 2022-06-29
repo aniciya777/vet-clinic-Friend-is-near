@@ -6,7 +6,7 @@
         </h1>
     </div>
     <div class="row">
-      <ServicesBlock />
+      <ServicesBlock :hasSearch="true" />
     </div>
   </div>
 </template>
